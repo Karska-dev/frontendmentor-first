@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .attribution {
@@ -42,8 +43,8 @@ body {
 #logo {
   margin: 10px;
   padding: 30px 30px 0px 30px;
-  width: 230px;
-  height: 135px;
+  width: 300px;
+  height: 175px;
   background-color: hsl(228, 56%, 26%);
   border-radius: 5px 65px 5px 5px;
 }
@@ -69,8 +70,8 @@ body {
 #progress {
   margin: 10px;
   padding: 30px 30px 0px 30px;
-  width: 400px;
-  height: 100px;
+  width: 470px;
+  height: 135px;
   background-color: hsl(228, 56%, 26%);
   border-radius: 5px;
   color: hsl(243, 100%, 93%);
@@ -107,9 +108,9 @@ body {
 
 #bar-body {
   background-color: hsl(229, 57%, 11%);
-  height: 10px;
-  width: 99%;
-  border-radius: 7px;
+  height: 20px;
+  width: 100%;
+  border-radius: 10px;
   padding: 2px;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -121,19 +122,18 @@ body {
     hsl(6, 100%, 80%),
     hsl(335, 100%, 65%)
   );
-  height: 8px;
+  height: 100%;
   width: 81%;
-  border-radius: 7px;
-  padding: 1px;
+  border-radius: 10px;
+  padding: 2px;
 }
 
 #bar-point {
   background-color: hsl(243, 100%, 93%);
   height: 100%;
-  width: 8px;
-  border-radius: 7px;
+  width: 12px;
+  border-radius: 10px;
   margin-left: auto;
-  margin-right: 1px;
 }
 
 #bar-labels {
