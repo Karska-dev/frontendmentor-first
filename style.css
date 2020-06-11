@@ -7,6 +7,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: hsl(243, 100%, 93%);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -16,7 +17,7 @@
 html {
   height: 100vh;
   max-width: 1440px;
-  min-width: 200px;
+  min-width: 256px;
   background-color: #0c1a3d;
 }
 
@@ -31,7 +32,7 @@ body {
   justify-content: space-between;
 }
 
-#info {
+.info {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -40,22 +41,26 @@ body {
   font-size: 14px;
 }
 
-#logo {
+.logo {
   margin: 10px;
-  padding: 30px 30px 0px 30px;
+  padding-left: 5%;
   width: 300px;
   height: 175px;
   background-color: hsl(228, 56%, 26%);
   border-radius: 5px 65px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-#buttons {
+.menu {
   margin: 5px 5px 5px 0px;
   display: flex;
   flex-direction: row;
 }
 
-.icon-buttons {
+.menu__button {
   background-color: hsl(229, 57%, 11%);
   border-radius: 10px;
   height: 45px;
@@ -67,7 +72,7 @@ body {
   border: none;
 }
 
-#progress {
+.progress {
   margin: 10px;
   padding: 30px 30px 0px 30px;
   width: 470px;
@@ -78,7 +83,7 @@ body {
   position: relative;
 }
 
-#popup {
+.popup {
   font-weight: 700;
   color: hsl(229, 7%, 55%);
   text-transform: uppercase;
@@ -90,7 +95,7 @@ body {
   padding: 10px 15px;
 }
 
-#popup::after {
+.popup::after {
   content: "";
   position: absolute;
   border-width: 10px;
@@ -100,13 +105,13 @@ body {
   right: 0;
 }
 
-#digits {
+.popup__digits {
   color: hsl(229, 57%, 11%);
 
   font-size: 32px;
 }
 
-#bar-body {
+.bar__body {
   background-color: hsl(229, 57%, 11%);
   height: 20px;
   width: 100%;
@@ -116,7 +121,7 @@ body {
   margin-bottom: 5px;
 }
 
-#bar-line {
+.bar__line {
   background-image: linear-gradient(
     to right,
     hsl(6, 100%, 80%),
@@ -128,7 +133,7 @@ body {
   padding: 2px;
 }
 
-#bar-point {
+.bar__point {
   background-color: hsl(243, 100%, 93%);
   height: 100%;
   width: 12px;
@@ -136,21 +141,36 @@ body {
   margin-left: auto;
 }
 
-#bar-labels {
+.bar__labels {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 427px) {
-  #info {
-    font-size: 11px;
+@media only screen and (max-width: 565px) {
+  .info {
+    font-size: 10px;
   }
-  #logo {
-    width: 30%;
+  .logo {
+    width: 40%;
+    height: 135px;
+    padding-left: 6%;
   }
-  #logo img {
-    width: 90%;
+  .logo__img {
+    width: 50%;
+  }
+  .menu__button {
+    width: auto;
+    height: auto;
+    padding: 6px;
+  }
+  .progress {
+    width: 40%;
+  }
+
+  .popup {
+    top: -35%;
+    right: 5px;
   }
 }
 
@@ -166,29 +186,34 @@ body {
     background-size: cover;
   }
 
-  #info {
+  .info {
     flex-direction: column;
     align-items: center;
     font-size: 10px;
   }
 
-  #logo {
-    width: 70%;
+  .logo {
+    width: 85%;
+    height: 175px;
   }
 
-  #progress {
-    width: 70%;
+  .menu__button {
+    padding: 10px;
   }
 
-  #popup {
+  .progress {
+    width: 85%;
+  }
+
+  .popup {
     border-radius: 10px;
-    top: 70%;
-    right: 30%;
+    top: 80%;
+    right: 25%;
     font-size: 8px;
     padding: 7px 15px;
   }
 
-  #popup::after {
+  .popup::after {
     visibility: hidden;
   }
 }
